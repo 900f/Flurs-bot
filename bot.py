@@ -1,6 +1,12 @@
 import discord
 from discord.ext import commands
 from discord import app_commands
+from dotenv import load_dotenv
+import os
+
+
+load_dotenv()
+TOKEN = os.getenv("DISCORD_TOKEN")
 
 # Config
 GUILD_ID = 1395452995256320000  # Replace with your actual server ID (int)
@@ -198,4 +204,5 @@ async def prices(interaction: discord.Interaction):
 # Run the bot
 # ----------------------
 
-bot.run('MTM5NTc0MzYyNjk4NTk5NjQzNA.GAnJAy.ykEMzg-UKYzXzOpbWOhiut6aaBX8SgK_3s3bts')
+bot.run(TOKEN)
+
